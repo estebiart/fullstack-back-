@@ -3,17 +3,17 @@ on:
  push:
  branches: [ main ]
  pull_request:
- branches: [ main ]
+    branches: [ main ]
  workflow_dispatch:
 jobs:
- build:
- runs-on: ubuntu-latest
- steps:
-- uses: actions/checkout@v2
-- name: Install dependencies
-run: |
-python -m pip install --upgrade pip
-pip install pylint pytest flask
+     build:
+       runs-on: ubuntu-latest
+       steps:
+        - uses: actions/checkout@v2
+        - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint pytest flask
 - name: Pylint
 run: pylint `ls -R|grep .py$|xargs`
 - name: Pytest
