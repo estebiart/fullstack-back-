@@ -1,0 +1,17 @@
+{% extends "" %}
+{% block title%} {{ title}} {% end block%}
+
+{% block content %}
+{% from "macro.html"  import render_field %}
+<form>
+    {{render_field(form.nombre)}}
+    {{render_field(form.apellidos)}}
+    {{render_field(form.fecha)}}
+    {{render_field(form.tamaño)}}
+    {{render_field(form.select)}}
+</form>
+ 
+
+
+
+{% end block%}
