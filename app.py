@@ -32,6 +32,6 @@ def checksize():
    val=request.form.get("tamano")
    if(val =="S"):
          mensaje="no disponible"
-   mensaje=""
+   mensaje=val
    return Response(mensaje, 200, {'Access-Control-Allow-Origin': '*'})
 
